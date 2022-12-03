@@ -1,0 +1,15 @@
+{
+    "background_color": "purple",
+    "description": "pohang AOS",
+    "display": "fullscreen",
+    "icons": [
+      {
+        "src": "/img/pohang.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "short_name": "pohang AOS",
+    "name": "pohang AOS",
+    "start_url": "/login"
+  }

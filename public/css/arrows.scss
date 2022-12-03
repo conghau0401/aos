@@ -1,0 +1,120 @@
+.carousel {
+    &__prev, &__next {
+        background: #fff;
+        svg {
+            fill: #ccc;
+            border: 1px solid #ccc;
+        }
+    }
+    &__prev--in-active, &__next--in-active {
+        opacity: 0.5;
+    }
+}
+#menu {
+    .carousel__prev svg, .carousel__next svg {
+        border: none;
+    }
+}
+.product-detail {
+    &__relation {
+        position: relative;
+        .carousel {
+            &__prev, &__next {
+                background: #fff;
+                top: -30px;
+                right: 17px;
+                svg {
+                    fill: #ccc;
+                    border: 1px solid #ccc;
+                }
+            }
+            &__prev {
+                left: auto;
+            }
+            &__prev--in-active, &__next--in-active {
+                opacity: 0.5;
+            }
+        }
+    }
+    &__thumbnail {
+        .carousel {
+            &__prev, &__next {
+                background: #fff;
+                svg {
+                    fill: #ccc;
+                    border: 1px solid #ccc;
+                    border-radius: 50%;
+                }
+            }
+            &__prev--in-active, &__next--in-active {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+#menu {
+    .carousel__prev, .carousel__next {
+        display: none;
+    }
+}
+.banner-card {
+    button.carousel__pagination-button.carousel__pagination-button--active {
+        background: #ef4130;
+    }
+
+    .carousel__pagination {
+        padding: 0 10px 0 0;
+    }
+
+    .carousel__prev,
+    .carousel__next {
+        box-sizing: content-box;
+        border: 3px solid white;
+        background-color: #ef4130;
+        transform: translate(0, -50%);
+        top: 45%;
+        svg {
+            fill: #fff;
+            border: none;
+        }
+        left: 5px;
+    }
+    .carousel__next {
+        left: auto;
+        right: 5px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #menu {
+        .carousel {
+            padding: 0 15px;
+            overflow: hidden;
+        }
+        .carousel__prev, .carousel__next {
+            display: block;
+            background-color: #fff;
+            top: 35%;
+        }
+        .carousel__next {
+            right: 5px;
+        }
+        .carousel__prev {
+            left: 5px;
+        }
+        .carousel__icon {
+            fill: #444;
+        }
+    }
+    .product-detail {
+        &__thumbnail {
+            .carousel {
+                &__prev, &__next {
+                    top: 38%;
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.product-detail {
+    .vue-star-rating {
+        .vue-star-rating-star {
+            width: 30px;
+        }
+        .vue-star-rating-rating-text {
+            order: 1;
+            font-weight: bold;
+            margin-right: 10px;
+            padding-top: 5px;
+        }
+        .vue-star-rating-star {
+            order: 2;
+        }
+    }
+}
+@media only screen and (max-width: 767px) {
+    .product-detail {
+        .vue-star-rating {
+            .vue-star-rating-star {
+                width: 25px;
+            }
+        }
+    }
+}

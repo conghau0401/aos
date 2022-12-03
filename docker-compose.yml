@@ -1,0 +1,70 @@
+version: "3"
+services:
+
+  php:
+    container_name: aos_php
+    build:
+      context: ./docker/php
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/opt/app
+    depends_on:
+    - cache
+    ports:
+      - "443:443"
+    networks:
+      - aos_appnet
+  cache:
+    container_name: aos_cache
+    image: redis:6.2-alpine
+    restart: always
+    ports:
+      - '6379:6379'
+    command: redis-server --save 20 1 --loglevel warning --requirepass cafe24@001!
+    volumes:
+      - data_cache:/data
+    networks:
+      - aos_appnet
+
+  mysql:
+    image: mariadb:10.8
+    container_name: aos_database
+    volumes:
+      - data_db:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: "aos_database"
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+    networks:
+      - aos_appnet
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    depends_on:
+      - mysql
+    ports:
+      - 8084:80
+    environment:
+      PMA_HOST: aos_database
+      PMA_USER: root
+      PMA_PASSWORD: root
+    networks:
+      - aos_appnet
+
+  composer:
+    image: composer
+    volumes:
+    - ./:/app
+    command: composer install --ignore-platform-reqs
+
+networks:
+  aos_appnet:
+    driver: "bridge"
+
+volumes:
+  data_db:
+  data_cache:

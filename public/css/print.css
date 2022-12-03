@@ -1,0 +1,54 @@
+.billPrt {
+  max-width: 90%;
+  font-size: clamp(10px, 3vw, 11px);
+  margin: 0 auto;
+}
+.billPrt .float-end img {
+  max-height: 40px;
+}
+.billPrt h2 {
+  font-size: clamp(16px, 3vw, 20px);
+  font-weight: bold;
+}
+.billPrt .headerBar {
+  border-bottom: 2px solid #ef4130;
+}
+.billPrt .headerBar p.title {
+  position: relative;
+  background: #ef4130;
+  color: #fff;
+  height: 45px;
+  line-height: 47px;
+  text-align: center;
+  margin-bottom: 0;
+  border-radius: 10px 12px 0 0;
+  width: 35%;
+}
+.billPrt .headerBar p.contact {
+  padding-left: 5px;
+  width: 65%;
+  line-height: 45px;
+  margin-bottom: 0;
+}
+.billPrt .wrap-btn-issued button {
+  min-width: 120px;
+  background-color: #ed3f36;
+  border-radius: 0;
+}
+.billPrt .wrapper-btn-certificate button {
+  font-size: inherit;
+  background: #ef4130;
+  padding: 6px;
+  min-width: 110px;
+  color: #fff;
+  border-radius: 0;
+}
+.billPrt .wrapper-btn-certificate button:hover {
+  background: #c72e26;
+}
+.billPrt .wrapper-btn-certificate button:focus {
+  outline: none !important;
+}
+.wrapper-btn-certificate {
+  display: none !important;
+}

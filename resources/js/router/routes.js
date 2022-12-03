@@ -1,0 +1,202 @@
+const routes = [
+    {
+        path: "/",
+        component: () =>  import("../pages/Home"),
+        name: "home",
+        meta: { title: "titlePage.home" },
+    },
+    {
+        path: "/privacy",
+        component: () =>  import("../pages/StaticPage"),
+        name: "privacy",
+        meta: { title: "titlePage.privacy" },
+    },
+    {
+        path: "/terms-of-service",
+        component: () =>  import("../pages/StaticPage"),
+        name: "termService",
+        meta: { title: "titlePage.termService" },
+    },
+    {
+        path: "/notice",
+        component: () =>  import("../pages/StaticPage"),
+        name: "notice",
+        meta: { title: "titlePage.notice" },
+    },
+    {
+        path: "/about",
+        component: () =>  import("../pages/StaticPage"),
+        name: "about",
+        meta: { title: "titlePage.about" },
+    },
+    {
+        path: "/login",
+        component: () =>  import("../pages/Login"),
+        name: "login",
+        meta: { title: "titlePage.login" },
+    },
+    {
+        path: "/category/:id(\\d+)",
+        component: () =>  import("../pages/Category"),
+        name: "category",
+        meta: { title: "titlePage.category" },
+    },
+    {
+        path: "/product-detail/:id(\\d+)",
+        component: () =>  import("../pages/ProductDetail"),
+        name: "productdetail",
+        meta: { title: "titlePage.productDetail" },
+    },
+    {
+        path: "/plan-product/:id(\\d+)?",
+        component: () =>  import("../pages/PlanProduct"),
+        name: "PlanProduct",
+        meta: { title: "titlePage.planProduct" },
+    },
+    {
+        path: "/recommend-product/:id(\\d+)?",
+        component: () =>  import("../pages/RecommendProduct"),
+        name: "RecommendProduct",
+        meta: { title: "titlePage.recommendProduct" },
+    },
+    {
+        path: "/discount-product/:id(\\d+)?",
+        component: () =>  import("../pages/DiscountProduct"),
+        name: "DiscountProduct",
+        meta: { title: "titlePage.discountProduct" },
+    },
+    {
+        path: "/faq",
+        component: () =>  import("../pages/FAQ"),
+        name: "faq",
+        meta: { title: "titlePage.faq" },
+    },
+    {
+        path: "/wishlist-product",
+        component: () =>  import("../pages/WishlistProduct"),
+        name: "WishlistProduct",
+        meta: { title: "titlePage.wishlistProduct" },
+    },
+    {
+        path: "/regular-delivery",
+        component: () =>  import("../pages/RegularDelivery"),
+        name: "RegularDelivery",
+        meta: { title: "titlePage.regularDelivery" },
+    },
+    {
+        path: "/monthly-purchase-history",
+        component: () =>  import("../pages/MonthlyPurchaseHistory"),
+        name: "MonthlyPurchaseHistory",
+        meta: { title: "titlePage.monthlyPurchaseHistory" },
+    },
+    {
+        path: "/deposit",
+        component: () =>  import("../pages/Deposit"),
+        name: "Deposit",
+        meta: { title: "titlePage.deposit" },
+    },
+    {
+        path: "/return-notice",
+        component: () =>  import("../pages/ReturnNotice"),
+        name: "ReturnNotice",
+        meta: { title: "titlePage.returnNotice" },
+    },
+    {
+        path: "/best-product",
+        component: () =>  import("../pages/BestProduct"),
+        name: "BestProduct",
+        meta: { title: "titlePage.bestProduct" },
+    },
+    {
+        path: "/store-info",
+        component: () =>  import("../pages/StoreInfo"),
+        name: "StoreInfo",
+        meta: { title: "titlePage.storeInfo" },
+    },
+    {
+        path: "/order-history",
+        component: () =>  import("../pages/OrderHistory"),
+        name: "OrderHistory",
+        meta: { title: "titlePage.orderHistory" },
+    },
+    {
+        path: "/private-info",
+        component: () =>  import("../pages/PrivateInfo"),
+        name: "PrivateInfo",
+        meta: { title: "titlePage.privateInfo" },
+    },
+    {
+        path: "/order-history/:id",
+        component: () =>  import("../pages/OrderHistoryDetail"),
+        name: "OrderHistoryDetail",
+        meta: { title: "titlePage.orderHistoryDetail" },
+    },
+    {
+        path: "/notice",
+        component: () =>  import("../pages/Notice"),
+        name: "Notice",
+        meta: { title: "titlePage.notice" },
+    },
+    {
+        path: "/bill-printing",
+        component: () =>  import("../components/BillPrinting"),
+        name: "BillPrinting",
+        meta: { title: "titlePage.billPrinting" },
+    },
+    {
+        path: "/bar-code-scan",
+        component: () =>  import("../pages/BarCodeScan"),
+        name: "BarCodeScan",
+        meta: { title: "titlePage.barCodeScan" },
+    },
+    {
+        path: "/shopping-cart",
+        component: () =>  import("../pages/ShoppingCart"),
+        name: "ShoppingCart",
+        meta: { title: "titlePage.shoppingCart" },
+    },
+    {
+        path: "/order-form",
+        component: () =>  import("../pages/OrderForm"),
+        name: "OrderForm",
+        meta: { title: "titlePage.orderForm" },
+    },
+    {
+        path: "/order-completed",
+        component: () =>  import("../pages/OrderCompleted"),
+        name: "OrderCompleted",
+        meta: { title: "titlePage.orderCompleted" },
+    },
+    {
+        path: "/new-product",
+        component: () =>  import("../pages/NewProduct"),
+        name: "NewProduct",
+        meta: { title: "titlePage.newProduct" },
+    },
+    {
+        path: "/window-regular",
+        component: () =>  import("../pages/WindowRegular"),
+        name: "WindowRegular",
+        meta: { title: "titlePage.windowRegular" },
+    },
+    {
+        path: "/search",
+        component: () =>  import("../pages/Search"),
+        name: "Search",
+        meta: { title: "titlePage.search" },
+    },
+    {
+        path: "/payment-method",
+        component: () =>  import("../pages/PaymentMethod"),
+        name: "PaymentMethod",
+        meta: { title: "titlePage.paymentMethod" },
+    },
+    {
+        path: '/:pathMatch(.*)*',
+        redirect: to => {
+            return { path: '/' }
+        },
+    },
+];
+
+export default routes;

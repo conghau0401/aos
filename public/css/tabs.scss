@@ -1,0 +1,84 @@
+.best-product {
+    .nav-tabs {
+        border: none;
+    }
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+        border: none;
+        color: #ef4130;
+        font-weight: bold;
+        border-bottom: 2px solid #ef4130;
+    }
+    .nav-tabs .nav-link {
+        border: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding-bottom: 10px;
+        text-transform: initial;
+        font-size: 17px;
+        color: #999;
+        background: none;
+        padding: 0 0 10px;
+        margin: 0 25px;
+        padding-left: 30px;
+    }
+    .nav-tabs .nav-item {
+        .nav-link {
+            position: relative;
+            &:after {
+                position: absolute;
+                -webkit-mask: url(/img/icon/box.svg) no-repeat 100% 100%;
+                mask: url(/img/icon/box.svg) no-repeat 100% 100% left center;
+                mask-size: contain;
+                background-color: #999;
+                width: 20px;
+                height: 20px;
+                content: "";
+                left: 0;
+                top: 0px;
+            }
+            &.active {
+                &:after {
+                    background-color: #ef4130;
+                }
+            }
+        }
+        &:nth-child(2) {
+            .nav-link {
+                &:after {
+                    -webkit-mask: url(/img/icon/box01.svg) no-repeat 100% 100%;
+                    mask: url(/img/icon/box01.svg) no-repeat 100% 100% left center;
+                }
+            }
+        }
+        &:nth-child(3) {
+            .nav-link {
+                &:after {
+                    -webkit-mask: url(/img/icon/both.svg) no-repeat 100% 100%;
+                    mask: url(/img/icon/both.svg) no-repeat 100% 100% left center;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .best-product {
+        .nav-tabs {
+            .nav-item {
+                .nav-link {
+                    margin: 0 15px;
+                    font-size: 13px;
+                    padding-left: 25px;
+                    &:after {
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+        }
+        .tab-content.mt-5 {
+            margin-top: 20px !important;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.flex {
+    display: flex;
+}
+.flex-btn > a {
+    margin-right: 5px;
+}
+.item-addition {
+    position: relative;
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+}
+.item-addition .del-old-image,
+.item-addition .del-addition-image {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+.icons-flex .item-icon {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-right: 20px;
+}
+form .select2-container .select2-selection--single {
+    height: 38px;
+}
+form .select2-container--default .select2-selection--multiple .select2-selection__choice__display {
+    color: #000;
+}
+#frm-search .btn-search {
+    height: 38px;
+}
